@@ -8,6 +8,7 @@ public class Move : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
     public float turnSpeed;
+    public float jump;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,14 @@ public class Move : MonoBehaviour
 
         transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
+
+        //jump = Input.GetKey(KeyCode.Space);
+
+        if (Input.GetKey("space"))
+        {
+            transform.Translate(Vector3.up);
+        }
+
         // (0, 0, -0.1f)
     }
 
