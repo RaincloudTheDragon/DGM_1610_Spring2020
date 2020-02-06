@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    public int pointsToAdd;
     public string pickupName;
     public string pickupType;
     public int score;
-    public int pointsToAdd;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,7 @@ public class Pickup : MonoBehaviour
     {
         
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
