@@ -8,7 +8,8 @@ public class Move : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
     public float turnSpeed;
-    public float jump;
+    public float jumpSpeed;
+    public float positionLock;
 
     public GameObject projectilePreFab;
 
@@ -21,21 +22,27 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Forward and Backward movement
         verticalInput = Input.GetAxis("Vertical");
-        horizontalInput = Input.GetAxis("Horizontal");
-
         transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
-        transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
+        speed = 10;
 
+        //Rotation
+        horizontalInput = Input.GetAxis("Horizontal");
+        transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
+        turnSpeed = 200;
+
+        //Jump!
+        jumpSpeed = 2;
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            transform.Translate(Vector3.up);
+            transform.Translate(Vector3.up * jumpSpeed);
         }
 
-        if(Input.GetKeyDown(KeyCode.I))
+        //For his neutral special, joker wields GUN
+        if(Input.GetKeyDown(KeyCode.Q))
         {
             Instantiate(projectilePreFab, transform.position, projectilePreFab.transform.rotation);
         }
     }
-
 }

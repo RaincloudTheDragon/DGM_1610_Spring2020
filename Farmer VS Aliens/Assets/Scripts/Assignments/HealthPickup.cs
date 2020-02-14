@@ -20,7 +20,7 @@ public class HealthPickup : Pickup
 
     private void OnTriggerEnter(Collider other)
     {
-        print("You Gained Health " + healthAmt + " Health!");
+        print("You Gained " + healthAmt + " Health!");
         Destroy(gameObject);
     }
 }
