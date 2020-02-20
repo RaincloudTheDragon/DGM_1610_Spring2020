@@ -209,86 +209,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &134542042 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-    type: 3}
-  m_PrefabInstance: {fileID: 222599505}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &222599505
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1531647764}
-    m_Modifications:
-    - target: {fileID: 3851107591147083404, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083511, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851107591147083403, guid: 748ea2242fd267146beb24fb4f7e8767,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 2076152196}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 748ea2242fd267146beb24fb4f7e8767, type: 3}
 --- !u!1 &285059307
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +315,7 @@ GameObject:
   - component: {fileID: 409746596}
   - component: {fileID: 409746595}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: GoldCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -749,7 +669,7 @@ GameObject:
   - component: {fileID: 743276110}
   - component: {fileID: 743276114}
   m_Layer: 0
-  m_Name: Obstacle1
+  m_Name: Obstacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1048,7 +968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs: []
-  enemyIndex: 25
+  enemyIndex: 1
 --- !u!4 &1531647764
 Transform:
   m_ObjectHideFlags: 0
@@ -1059,8 +979,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 134542042}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1080,7 +999,7 @@ GameObject:
   - component: {fileID: 2048944016}
   - component: {fileID: 2048944017}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: HealthPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

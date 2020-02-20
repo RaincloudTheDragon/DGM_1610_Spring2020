@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
+    public GameObject Player;
     public Transform target;
     public float moveSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Player = GameObject.Find
     }
 
     // Update is called once per frame
