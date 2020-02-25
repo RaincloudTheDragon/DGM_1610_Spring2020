@@ -5,19 +5,28 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     public GameObject Player;
-    public Transform target;
+    //public Transform target;
     public float moveSpeed;
+    private Rigidbody enemyRb;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Player = GameObject.Find
+        enemyRb = GetComponent<Rigidbody>();
+        Player = GameObject.Find("Player");
+        //target = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target);
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        //Transform
+        //transform.LookAt(target);
+        //transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+
+        //Add Force
+        enemyRb.AddForce((Player.transform.position - transform.position).normalized * moveSpeed);
+
+        //Velocity
     }
 }
