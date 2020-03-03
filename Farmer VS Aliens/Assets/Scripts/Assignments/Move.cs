@@ -10,6 +10,7 @@ public class Move : MonoBehaviour
     public float turnSpeed;
     public float jumpSpeed;
     public float positionLock;
+    //public float jumpInput;
 
     public GameObject projectilePreFab;
 
@@ -39,10 +40,21 @@ public class Move : MonoBehaviour
             transform.Translate(Vector3.up * jumpSpeed);
         }
 
+        // Jump Mechanic
+        // jumpInput = Input.GetAxis("Jump")
+
         //For his neutral special, joker wields GUN
         if(Input.GetKeyDown(KeyCode.Q))
         {
             Instantiate(projectilePreFab, transform.position, projectilePreFab.transform.rotation);
         }
+        
+//        void OnCollisionEnter(Collision other)
+//        {
+//            if (other.gameObject.tag == "Ground")
+//            {
+//                isGrounded = true;
+//            }
+//        }
     }
 }

@@ -29,4 +29,9 @@ public class EnemyMove : MonoBehaviour
 
         //Velocity
     }
+
+    private void FixedUpdate()
+    {
+        //enemyRb.AddForce((Player.transform.position - transform.position));
+    }
 }

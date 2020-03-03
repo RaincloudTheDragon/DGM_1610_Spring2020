@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
     {
         //always start the game with max health!
         currentHealth = maxHealth;
+        spawnPoint = GameObject.Find("SpawnPoint").transform;
     }
 
     public void TakeDamage(int amount)
