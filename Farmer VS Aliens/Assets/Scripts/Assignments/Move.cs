@@ -8,16 +8,18 @@ public class Move : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
     public float turnSpeed;
-    public float jumpSpeed;
-    public float positionLock;
-    //public float jumpInput;
+
+    public float jumpHeight;
+    public bool isGrounded;
+
+    private Rigidbody rb;
 
     public GameObject projectilePreFab;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -33,28 +35,35 @@ public class Move : MonoBehaviour
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
         turnSpeed = 200;
 
-        //Jump!
-        jumpSpeed = 2;
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            transform.Translate(Vector3.up * jumpSpeed);
-        }
-
-        // Jump Mechanic
-        // jumpInput = Input.GetAxis("Jump")
-
         //For his neutral special, joker wields GUN
         if(Input.GetKeyDown(KeyCode.Q))
         {
             Instantiate(projectilePreFab, transform.position, projectilePreFab.transform.rotation);
         }
-        
-//        void OnCollisionEnter(Collision other)
-//        {
-//            if (other.gameObject.tag == "Ground")
-//            {
-//                isGrounded = true;
-//            }
-//        }
+    }
+        private void FixedUpdate()
+        {
+            //Jump!
+            if(Input.GetButtonDown("Jump") && isGrounded)
+            {
+                rb.AddForce(Vector3.up * jumpHeight * 1000 * Time.deltaTime);
+            }   
+        }
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Obstacle"))
+        {
+            isGrounded = true;
+            Debug.Log("Colliding with Floor");
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Obstacle"))
+        {
+            isGrounded = false;
+            Debug.Log("Not Colliding with Floor");
+        }
     }
 }

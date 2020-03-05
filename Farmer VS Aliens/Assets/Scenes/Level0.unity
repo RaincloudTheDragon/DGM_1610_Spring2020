@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 743276114}
   m_Layer: 0
   m_Name: Obstacle2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1262,8 +1262,8 @@ MonoBehaviour:
   verticalInput: 0
   horizontalInput: 0
   turnSpeed: 200
-  jumpSpeed: 0
-  positionLock: 0
+  jumpHeight: 10
+  isGrounded: 0
   projectilePreFab: {fileID: 9041402052364418816, guid: aa6eb3f47bdea7f4985c0f4355570b94,
     type: 3}
 --- !u!54 &2076152198
