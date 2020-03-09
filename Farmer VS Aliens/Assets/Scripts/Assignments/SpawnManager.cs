@@ -12,7 +12,10 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+//        for (int i = 0;
+//        {
+//            Debug.Log("creating enemy number");
+//        }
     }
 
     // Update is called once per frame

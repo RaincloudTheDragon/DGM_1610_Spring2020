@@ -998,7 +998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs: []
-  enemyIndex: 1
+  enemyIndex: 2
 --- !u!4 &1531647764
 Transform:
   m_ObjectHideFlags: 0
