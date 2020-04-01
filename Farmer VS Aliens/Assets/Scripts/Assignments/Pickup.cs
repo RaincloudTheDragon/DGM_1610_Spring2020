@@ -26,6 +26,7 @@ public class Pickup : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             ScoreManager.AddPoints(pointsToAdd);
+            //PlayerHealth.DoDamage(damage);
             Destroy(gameObject);
         }
     }
