@@ -34,7 +34,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //a Debug.Log will show up every time update is called, it is better put in addpoints
+        // A Debug.Log will show up every time update is called, it is better put in addpoints
 
         if (score < 0)
             score = 0;
@@ -51,16 +51,18 @@ public class ScoreManager : MonoBehaviour
         // If player hits the Escape key return to start menu
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0); //LoadScene(0); is the menu!
         }
     }
 
     public static void AddPoints(int pointsToAdd)
     {
         score += pointsToAdd;
+        //longhand: score = score + pointsToAdd;
         Debug.Log("Game Score: " + score);
     }
 
+    //point deduction!
     public static void SubPoint(int pointsToSub)
     {
         score -= pointsToSub;
