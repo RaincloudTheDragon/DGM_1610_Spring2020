@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityENgine.AI;
+using UnityEngine.AI;
 
 public class Wander : MonoBehaviour
 {
@@ -21,17 +21,17 @@ public class Wander : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+/*         timer += Time.deltaTime;
 
         if (timer >= wanderTimer)
         {
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
             agent.SetDestination(newpos);
             timer = 0;
-        }
+        } */
     }
 
-    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+/*     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
     {
         Vector3 randDirection = RandomNavSphere.insideUnitSphere * dist;
 
@@ -42,5 +42,5 @@ public class Wander : MonoBehaviour
         UnityEngine.AI.NavMesh.SamplePosition (randDirection, out navHit, dist, layermask);
 
         return navHit.position;
-    }
+    } */
 }
