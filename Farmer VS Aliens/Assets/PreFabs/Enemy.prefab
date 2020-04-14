@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3851107591147083403}
   - component: {fileID: -1741959092093091786}
   - component: {fileID: 8365397984559078094}
+  - component: {fileID: -4195702390632922091}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -140,3 +141,17 @@ MonoBehaviour:
   maxHealth: 3
   spawnPoint: {fileID: 0}
   points: 10
+--- !u!114 &-4195702390632922091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3851107591147083404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39be8481e154a8442920183d0a12997e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wanderRadius: 0
+  wanderTimer: 0

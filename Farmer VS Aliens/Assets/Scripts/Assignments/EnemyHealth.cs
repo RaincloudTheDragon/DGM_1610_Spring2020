@@ -27,18 +27,12 @@ public class EnemyHealth : MonoBehaviour
             currentHealth = 0;
             print("Enemy is dead!");
             //add points to score for killing enemy
-            //scoreManager.AddPoints(points);
+            ScoreManager.AddPoints(points);
             //Move enemy from spawn point to restart
             transform.position = spawnPoint.position;
             transform.rotation = spawnPoint.rotation;
             //Reset enemy health
             currentHealth = maxHealth;
         }
-    }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
