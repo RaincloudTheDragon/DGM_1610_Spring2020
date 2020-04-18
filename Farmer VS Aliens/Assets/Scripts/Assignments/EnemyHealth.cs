@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int currentHealth;
-    public int maxHealth = 3;
+    public const int maxHealth = 3;
     public Transform spawnPoint;
     //how many points do we get for destroying this enemy?
     public int points = 10;
