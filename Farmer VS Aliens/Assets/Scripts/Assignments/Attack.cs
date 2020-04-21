@@ -18,7 +18,7 @@ public class Attack : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
         print("Enemy is attacking!");
         var health = other.gameObject.GetComponent<PlayerHealth>();
