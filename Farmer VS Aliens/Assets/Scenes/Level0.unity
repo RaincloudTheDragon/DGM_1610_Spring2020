@@ -568,6 +568,7 @@ GameObject:
   - component: {fileID: 409746597}
   - component: {fileID: 409746596}
   - component: {fileID: 409746595}
+  - component: {fileID: 409746601}
   m_Layer: 0
   m_Name: GoldCoin
   m_TagString: Untagged
@@ -678,6 +679,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!95 &409746601
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409746594}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 354c7c542ab3bcc488690306ff763b57, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &489097653
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,8 +735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wanderRadius: 10
   wanderTimer: 10
-  target: {fileID: 0}
-  speed: 0
+  target: {fileID: 2076152196}
+  speed: 5
   alertDist: 0
   attackDist: 0
   damage: 0
@@ -1245,6 +1265,7 @@ GameObject:
   - component: {fileID: 743007290}
   - component: {fileID: 743007289}
   - component: {fileID: 743007294}
+  - component: {fileID: 743007295}
   m_Layer: 0
   m_Name: GoldBlock
   m_TagString: Untagged
@@ -1353,6 +1374,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &743007295
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743007288}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d36e4eb841206049a3fe15d6bd52f94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &743276109
 GameObject:
   m_ObjectHideFlags: 0
