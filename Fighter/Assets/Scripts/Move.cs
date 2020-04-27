@@ -10,12 +10,12 @@ public class Move : MonoBehaviour
     public float jumpHeight;
     public bool isGrounded;
 
-    // private Rigidbody rb;
+    private Rigidbody rb;
     
     // Start is called before the first frame update
     void Start()
     {
-        // rb = GetComponent<RigidBody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -27,12 +27,45 @@ public class Move : MonoBehaviour
         speed = 10;
     }
 
-    // private void FixedUpdate()
+    // Try to get it in one...? Not sure why it doesn't like OnCollisionStay
+    // void OnCollisionStay(Collider other)
     // {
-    //     //Jump
-    //     if(Input.GetKeyDown("up") && isGrounded)
+    //     if(other.gameObject.CompareTag("Floor"))
     //     {
-    //         rb.AddForce(Vector3.up *jumpHeight * 1000 * Time.deltaTime);
+    //         isGrounded = true;
+    //         Debug.Log("Grounded!");
+    //     }
+
+    //     else
+    //     {
+    //         Debug.Log("Not Grounded.");
     //     }
     // }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = true;
+            Debug.Log("Grounded!");
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = false;
+            Debug.Log("Not Grounded.");
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        //Jump
+        if(Input.GetKeyDown("up") && isGrounded)
+        {
+            rb.AddForce(Vector3.up *jumpHeight * 1000 * Time.deltaTime);
+        }
+    }
 }
